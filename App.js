@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
-import Ionicons from 'react-native-vector-icons';
+import { Icon } from 'react-native-elements'
 
 //import component
 import Home from './src/screens/Home';
@@ -16,7 +16,7 @@ const DashboardTabNavigator = createBottomTabNavigator(
       screen: Home,
       navigationOptions: {
         tabBarLabel: 'Home',
-        // tabBarIcon: () => <Ionicons name="md-home" size={30} />,
+        tabBarIcon: () => <Icon name='home' />,
       },
     },
 
@@ -24,14 +24,14 @@ const DashboardTabNavigator = createBottomTabNavigator(
       screen: Categories,
       navigationOptions: {
         tabBarLabel: 'Categories',
-        // tabBarIcon: () => <Ionicons name="md-apps" size={30} />,
+        tabBarIcon: () => <Icon name='apps' />,
       },
     },
     Bookmark: {
       screen: Bookmark,
       navigationOptions: {
         tabBarLabel: 'BookMark',
-        // tabBarIcon: () => <Ionicons name="ios-bookmark" size={30} />,
+        tabBarIcon: () => <Icon name='bookmark' />,
       },
     },
 
@@ -39,7 +39,7 @@ const DashboardTabNavigator = createBottomTabNavigator(
       screen: Setting,
       navigationOptions: {
         tabBarLabel: 'Setting',
-        // tabBarIcon: () => <Ionicons name="md-settings" size={30} />,
+        tabBarIcon: () => <Icon name='settings' />,
       },
     },
   },
